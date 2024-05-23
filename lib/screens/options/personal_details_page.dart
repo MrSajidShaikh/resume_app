@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../globals.dart';
 import '../backButton.dart';
 
@@ -24,6 +23,7 @@ class _personal_details_pageState extends State<personal_details_page> {
   final TextEditingController nationalityController = TextEditingController();
 
   bool? maritalStatues;
+
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
