@@ -103,7 +103,6 @@ class _HomePageState extends State<HomePage> {
                   "             No Resume \n Press + Create new Resume",
                   style: TextStyle(fontSize: 21, color: Colors.grey),
                 )
-
               ],
             ),
           ),
