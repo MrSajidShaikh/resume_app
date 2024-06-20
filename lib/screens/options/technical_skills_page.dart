@@ -13,6 +13,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
   List allTextFildList = [];
   List<TextEditingController> allControllers = [];
   int counter = 1;
+
   @override
   void initState() {
     super.initState();
@@ -73,7 +74,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       SizedBox(height: _height * 0.02),
                       ...allTextFildList
                           .map((e) => getTextFild(
-                          i: allTextFildList.indexOf(e), row: e))
+                              i: allTextFildList.indexOf(e), row: e))
                           .toList(),
                       SizedBox(height: _height * 0.06),
                       Container(
