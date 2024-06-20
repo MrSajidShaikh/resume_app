@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../globals.dart';
 import '../backButton.dart';
 
@@ -86,7 +85,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                             setState(() {
                               allControllers.add(TextEditingController());
                               allTextFildList.add(getTextFild(
-                                  i: allTextFildList.length, row: Row()));
+                                  i: allTextFildList.length, row: const Row()));
                             });
                           },
                         ),

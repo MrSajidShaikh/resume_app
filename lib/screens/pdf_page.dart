@@ -40,9 +40,11 @@ class _PDF_PageState extends State<PDF_Page> {
       color: PdfColors.blue900, fontSize: 14, fontWeight: pw.FontWeight.bold);
   var detailStylePW = const pw.TextStyle(color: PdfColors.grey, fontSize: 12);
   var detailStyle2PW =
-  const pw.TextStyle(color: PdfColors.grey700, fontSize: 12);
+      const pw.TextStyle(color: PdfColors.grey700, fontSize: 12);
+
   @override
   void initState() {
+    super.initState();
     pdf.addPage(
       pw.Page(
         build: (pw.Context context) {
@@ -93,14 +95,14 @@ class _PDF_PageState extends State<PDF_Page> {
                           ),
                           (Global.name != null)
                               ? pw.Text(
-                            "${Global.name}",
-                            textAlign: pw.TextAlign.center,
-                            style: pw.TextStyle(
-                              fontSize: 17,
-                              color: PdfColors.blue900,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          )
+                                  "${Global.name}",
+                                  textAlign: pw.TextAlign.center,
+                                  style: pw.TextStyle(
+                                    fontSize: 17,
+                                    color: PdfColors.blue900,
+                                    fontWeight: pw.FontWeight.bold,
+                                  ),
+                                )
                               : pw.Container(),
                         ],
                       ),
@@ -232,14 +234,14 @@ class _PDF_PageState extends State<PDF_Page> {
                       ),
                       (Global.name != null)
                           ? Text(
-                        "${Global.name}",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Colors.blue.shade900,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      )
+                              "${Global.name}",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            )
                           : Container(),
                     ],
                   ),
@@ -312,7 +314,7 @@ class _PDF_PageState extends State<PDF_Page> {
           Text("DOB : ${Global.dateOfBirth}", style: detailStyle),
           (Global.maritalStatus != null)
               ? Text("Marital Status : ${Global.maritalStatus}",
-              style: detailStyle)
+                  style: detailStyle)
               : Container(),
           Text("Nationality : ${Global.nationality}", style: detailStyle),
           const SizedBox(height: 10),
@@ -342,7 +344,7 @@ class _PDF_PageState extends State<PDF_Page> {
           Text("Interest & Hobbies ", style: titleStyle),
           const SizedBox(height: 3),
           ...Global.interestHobbies.map(
-                (e) => Text(" - $e", style: detailStyle),
+            (e) => Text(" - $e", style: detailStyle),
           )
         ],
       );
@@ -395,7 +397,7 @@ class _PDF_PageState extends State<PDF_Page> {
           Text("Technical Skills", style: titleStyle2),
           const SizedBox(height: 3),
           ...Global.technicalSkills.map(
-                (e) => Text(" - $e", style: detailStyle2),
+            (e) => Text(" - $e", style: detailStyle2),
           )
         ],
       );
@@ -412,7 +414,7 @@ class _PDF_PageState extends State<PDF_Page> {
           Text("Achievement", style: titleStyle2),
           const SizedBox(height: 3),
           ...Global.achievement.map(
-                (e) => Text(" - $e", style: detailStyle2),
+            (e) => Text(" - $e", style: detailStyle2),
           )
         ],
       );
@@ -487,11 +489,11 @@ class _PDF_PageState extends State<PDF_Page> {
               : Container(),
           (Global.experienceJoinDate != null)
               ? Text("Join Date : ${Global.experienceJoinDate}",
-              style: detailStyle2)
+                  style: detailStyle2)
               : Container(),
           (Global.experienceExitDate != null)
               ? Text("Exit Date : ${Global.experienceExitDate}",
-              style: detailStyle2)
+                  style: detailStyle2)
               : Container(),
         ],
       );
@@ -552,7 +554,7 @@ class _PDF_PageState extends State<PDF_Page> {
           pw.Text("DOB : ${Global.dateOfBirth}", style: detailStylePW),
           (Global.maritalStatus != null)
               ? pw.Text("Marital Status : ${Global.maritalStatus}",
-              style: detailStylePW)
+                  style: detailStylePW)
               : pw.Container(),
           pw.Text("Nationality : ${Global.nationality}", style: detailStylePW),
           pw.SizedBox(height: 10),
@@ -582,7 +584,7 @@ class _PDF_PageState extends State<PDF_Page> {
           pw.Text("Interest & Hobbies ", style: titleStylePW),
           pw.SizedBox(height: 3),
           ...Global.interestHobbies.map(
-                (e) => pw.Text(" - $e", style: detailStylePW),
+            (e) => pw.Text(" - $e", style: detailStylePW),
           )
         ],
       );
@@ -635,7 +637,7 @@ class _PDF_PageState extends State<PDF_Page> {
           pw.Text("Technical Skills", style: titleStyle2PW),
           pw.SizedBox(height: 3),
           ...Global.technicalSkills.map(
-                (e) => pw.Text(" - $e", style: detailStyle2PW),
+            (e) => pw.Text(" - $e", style: detailStyle2PW),
           )
         ],
       );
@@ -652,7 +654,7 @@ class _PDF_PageState extends State<PDF_Page> {
           pw.Text("Achievement", style: titleStyle2PW),
           pw.SizedBox(height: 3),
           ...Global.achievement.map(
-                (e) => pw.Text(" - $e", style: detailStyle2PW),
+            (e) => pw.Text(" - $e", style: detailStyle2PW),
           )
         ],
       );
@@ -725,15 +727,15 @@ class _PDF_PageState extends State<PDF_Page> {
               style: detailStyle2PW),
           (Global.experienceRole != "")
               ? pw.Text("Roles : ${Global.experienceRole}",
-              style: detailStyle2PW)
+                  style: detailStyle2PW)
               : pw.Container(),
           (Global.experienceJoinDate != null)
               ? pw.Text("Join Date : ${Global.experienceJoinDate}",
-              style: detailStyle2PW)
+                  style: detailStyle2PW)
               : pw.Container(),
           (Global.experienceExitDate != null)
               ? pw.Text("Exit Date : ${Global.experienceExitDate}",
-              style: detailStyle2PW)
+                  style: detailStyle2PW)
               : pw.Container(),
         ],
       );
