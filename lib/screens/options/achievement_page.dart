@@ -12,6 +12,7 @@ class achievement_page extends StatefulWidget {
 class _achievement_pageState extends State<achievement_page> {
   List allTextFildList = [];
   List<TextEditingController> allControllers = [];
+
   @override
   void initState() {
     super.initState();
@@ -70,10 +71,8 @@ class _achievement_pageState extends State<achievement_page> {
                           ),
                         ),
                         SizedBox(height: _height * 0.02),
-                        ...allTextFildList
-                            .map((e) => getTextFild(
-                            i: allTextFildList.indexOf(e), row: e))
-                            ,
+                        ...allTextFildList.map((e) =>
+                            getTextFild(i: allTextFildList.indexOf(e), row: e)),
                         SizedBox(height: _height * 0.06),
                         SizedBox(
                           height: _height * 0.055,
@@ -84,7 +83,8 @@ class _achievement_pageState extends State<achievement_page> {
                               setState(() {
                                 allControllers.add(TextEditingController());
                                 allTextFildList.add(getTextFild(
-                                    i: allTextFildList.length, row: const Row()));
+                                    i: allTextFildList.length,
+                                    row: const Row()));
                               });
                             },
                           ),
